@@ -7,7 +7,7 @@ import GuessList from './guess-list';
 
 export default function Game(props) {
     return (
-        <div>
+        <div className="game_container">
             <Header />
             <GuessSection feedback="Make your guess!" />
             <GuessCount count={3} />
