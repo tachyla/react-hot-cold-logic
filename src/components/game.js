@@ -10,8 +10,8 @@ export default class Game extends React.Component {
         super(props);
 
         this.state={
-            guesses:[1,2,3],
-            count:0,
+            guesses: [1,2,3],
+            count: 0,
             feedback: "Guess Now!"
         };
     
@@ -19,14 +19,14 @@ export default class Game extends React.Component {
     render() {
 
 
-    return (
-        <div className="game_container">
-            <Header />
-            <GuessSection feedback="Make your guess!" />
-            <GuessCount count={3} />
-            <GuessList guesses={[10, 15, 25]} />
-        </div>
-    );
-}
+        return (
+            <div className="game_container">
+                <Header />
+                <GuessSection feedback={this.state.feedback} />
+                <GuessCount count={this.state.count} />
+                <GuessList guesses={this.state.guesses} />
+            </div>
+        );
+    }
 }
 
